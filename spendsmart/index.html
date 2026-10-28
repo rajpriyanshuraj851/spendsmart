@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendSmart - Expense Tracker</title>
+    <link rel="stylesheet" href="static/style.css">
+   
+</head>
+
+<body>
+    <header>
+        <h1>SpendSmart 💰</h1>
+        <p>Smart money habits start here!</p>
+    </header>
+
+    <main>
+        <section class="summary">
+            <div class="card">
+                <h3>Monthly Budget</h3>
+                <p id="monthly-budget">₹5,000</p>
+            </div>
+            <div class="card">
+                <h3>Total Spent</h3>
+                <p id="totalSpent">₹0</p>
+            </div>
+            <div class="card">
+                <h3>Money Left</h3>
+                <p id="moneyLeft">₹5,000</p>
+            </div>
+        </section>
+        <section class="panel">
+    <h2>Set Your Monthly Budget 💰</h2>
+
+    <form id="budgetForm">
+        <label for="budgetAmount">Monthly Budget (₹)</label>
+        <input
+            id="budgetAmount"
+            type="number"
+            min="1"
+            step="0.01"
+            placeholder="Enter your budget"
+            required
+        >
+
+        <button type="submit">Save Budget</button>
+        <p id="budgetMessage"></p>
+    </form>
+</section>
+
+        <section class="panel">
+            <h2>Add an Expense</h2>
+            <form id="expenseForm">
+                <label for="title">Expense name</label>
+                <input id="title" type="text" placeholder="e.g. Lunch" required>
+
+                <label for="amount">Amount (₹)</label>
+                <input id="amount" type="number" min="1" step="0.01" placeholder="e.g. 120" required>
+
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">Choose category</option>
+                    <option>Food</option>
+                    <option>Travel</option>
+                    <option>Education</option>
+                    <option>Shopping</option>
+                    <option>Other</option>
+                </select>
+
+                <button type="submit">+ Add Expense</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Recent Expenses</h2>
+            <ul id="expenseList">
+                <li id="emptyMessage">No expenses yet. Add your first one!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>Built for students ❤️ | SpendSmart</footer>
+    <script src="static/script.js"></script>
+</body>
+</html>
